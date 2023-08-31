@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "src/components/common/index.ts"), // 진입점
+    main: path.resolve(__dirname, "src/components/common/index.tsx"), // 진입점
   },
   output: {
     // 번들링된 산출물의 경로와 번들링 파일 이름
