@@ -1,0 +1,28 @@
+const TIME_TABLE = [
+	{ value: '00:00' as const, label: '00:00' as const },
+	{ value: '01:00' as const, label: '01:00' as const },
+	{ value: '02:00' as const, label: '02:00' as const },
+	{ value: '03:00' as const, label: '03:00' as const },
+	{ value: '04:00' as const, label: '04:00' as const },
+	{ value: '05:00' as const, label: '05:00' as const },
+	{ value: '06:00' as const, label: '06:00' as const },
+	{ value: '07:00' as const, label: '07:00' as const },
+	{ value: '08:00' as const, label: '08:00' as const },
+	{ value: '09:00' as const, label: '09:00' as const },
+	{ value: '10:00' as const, label: '10:00' as const },
+	{ value: '11:00' as const, label: '11:00' as const },
+	{ value: '12:00' as const, label: '12:00' as const },
+	{ value: '13:00' as const, label: '13:00' as const },
+	{ value: '14:00' as const, label: '14:00' as const },
+	{ value: '15:00' as const, label: '15:00' as const },
+	{ value: '16:00' as const, label: '16:00' as const },
+	{ value: '17:00' as const, label: '17:00' as const },
+	{ value: '18:00' as const, label: '18:00' as const },
+	{ value: '19:00' as const, label: '19:00' as const },
+	{ value: '20:00' as const, label: '20:00' as const },
+	{ value: '21:00' as const, label: '21:00' as const },
+	{ value: '22:00' as const, label: '22:00' as const },
+	{ value: '23:00' as const, label: '23:00' as const },
+];
+
+export { TIME_TABLE };
