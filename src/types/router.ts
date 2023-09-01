@@ -9,6 +9,16 @@ type SiteMapType = {
 	};
 };
 
+type BreadCrumbsType = {
+	[key: string]: {
+		label: string;
+		bread_crumbs: {
+			label: string;
+			url: string;
+		}[];
+	};
+};
+
 type MenuListType = {
 	index: number;
 	icon: string;
@@ -17,4 +27,4 @@ type MenuListType = {
 	subMenus: { path: string; label: string }[];
 };
 
-export type { MenuListType, SiteMapType };
+export type { MenuListType, BreadCrumbsType, SiteMapType };
