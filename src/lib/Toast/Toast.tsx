@@ -4,10 +4,11 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import useSetTimeout from '../../hooks/useSetTimeout';
 import useToast from '../../stores/useToast';
 import { cn } from '../../utils/style';
-import toastQuestionSVG from './images/toast_question.svg';
-import toastSuccessSVG from './images/toast_success.svg';
-import toastWarningSVG from './images/toast_warning.svg';
+
 import { ToastStyle } from './style';
+import ToastQuestionSvg from './ToastQuestionSvg';
+import ToastSuccessSvg from './ToastSuccessSvg';
+import ToastWarningSvg from './ToastWarningSvg';
 
 const Toast = () => {
 	const { toastState, closeToast } = useToast();
@@ -18,19 +19,13 @@ const Toast = () => {
 	return (
 		<div className={cn(ToastStyle({ position }))}>
 			<div className='flex gap-3'>
-				<img
-					src={
-						leftIcon === 'question'
-							? toastQuestionSVG
-							: leftIcon === 'success'
-							? toastSuccessSVG
-							: leftIcon === 'warning'
-							? toastWarningSVG
-							: ''
-					}
-					alt={leftIcon}
-					className='w-8 h-8 rounded-lg'
-				/>
+				{leftIcon === 'question'
+					? ToastQuestionSvg()
+					: leftIcon === 'success'
+					? ToastSuccessSvg()
+					: leftIcon === 'warning'
+					? ToastWarningSvg()
+					: ''}
 				<div className='flex flex-col grow'>
 					<div className='flex items-center text-[15px] font-medium text-white mt-1'>{title}</div>
 					{description && <div className='mt-2 text-sm font-medium leading-5 text-gray-400'>{description}</div>}
