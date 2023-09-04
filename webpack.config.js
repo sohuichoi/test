@@ -9,8 +9,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              outputPath: "images/",
+              publicPath: "images/",
+            },
+          },
+        ],
       },
       {
         test: /\.tsx?$/,
